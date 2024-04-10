@@ -1,0 +1,73 @@
+body {
+    font-family: "Poppins";
+    padding:0;
+    margin:0;
+    color:white;
+    
+}
+
+.main-container {
+    height: 100svh;
+    background-image: url(/assets/bClouds\ 1.png);
+    background-size: cover;
+}
+
+.navbar,
+.navlinks {
+    display:flex;
+    align-items: center;
+}
+
+.navbar {
+    justify-content: space-between;
+    padding:10px;
+}
+
+.navlinks {
+    display: flex;
+    gap:40px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color:white;
+}
+
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.homepage-container h1 {
+    font-size: 45px;
+    background-color: #f0ffe9;
+    padding:10px 20px;
+    color:gray;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50svw;
+    gap:20px;
+}
+
+.title-container h1 {
+    margin:0;
+}
+
+.title-container p {
+    margin:0;
+}
+
+.data-container {
+    height:70vh;
+    width:40svw;
+    border:3px solid white;
+    
+}
+
