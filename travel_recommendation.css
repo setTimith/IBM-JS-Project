@@ -20,7 +20,7 @@ body {
 
 .navbar {
     justify-content: space-between;
-    padding:10px;
+    padding:5px 50px;
 }
 
 .navlinks {
