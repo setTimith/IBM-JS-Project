@@ -1,17 +1,17 @@
 function searchCondition() {
-  const input = document.getElementById("conditionInput").value.toLowerCase();
-  const resultDiv = document.getElementById("result");
+  const input = document.getElementById("countryInput").value.toLowerCase();
+  const resultDiv = document.getElementById("data-container");
   resultDiv.innerHTML = "";
 
-  fetch("health_analysis.json")
+  fetch(".json")
     .then((response) => response.json())
     .then((data) => {
-      const condition = data.conditions.find(
+      const country = data.countries.find(
         (item) => item.name.toLowerCase() === input,
       );
 
-      if (condition) {
-        const symptoms = condition.symptoms.join(", ");
+      if (country) {
+        const name = condition.symptoms.join(", ");
         const prevention = condition.prevention.join(", ");
         const treatment = condition.treatment;
 
@@ -31,3 +31,7 @@ function searchCondition() {
     });
 }
 btnSearch.addEventListener("click", searchCondition);
+
+function clearSearch() {
+  document.getElementById("countryInput").value= "";
+}
