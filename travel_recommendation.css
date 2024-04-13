@@ -1,4 +1,4 @@
-body {
+body, html {
     font-family: "Poppins";
     padding:0;
     margin:0;
@@ -12,6 +12,23 @@ body {
     background-size: cover;
 }
 
+.main-container-2 {
+    height: 100svh;
+    background-image: url(/assets/bClouds2.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container-3 {
+    height: 100svh;
+    background-image: url(/assets/bClouds3.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
 .navbar,
 .navlinks {
     display:flex;
@@ -21,6 +38,7 @@ body {
 .navbar {
     justify-content: space-between;
     padding:5px 50px;
+    gap:40px;
 }
 
 .navlinks {
@@ -31,13 +49,59 @@ body {
 .navlinks a {
     text-decoration: none;
     color:white;
+    /* padding:5px 20px; */
+    font-weight: 600;
+    text-transform: uppercase;
+
 }
+
+.active-link {
+    border-bottom: 2px solid white !important;
+}
+
+@keyframes expandAnimation {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    10% {
+        height: 80vh;
+        width: 0;
+    }
+    20%{
+        width: 0;
+    }
+    30%{
+        width: 50svw;
+    }
+
+}
+.aboutus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80svh;
+    overflow: hidden;
+    flex-direction: column;
+    border: 5px solid white;
+    width: 50svw;
+    animation: expandAnimation 5s ease-in 0s 1 normal forwards;
+}
+
+
+.aboutus-container h1 {
+    font-size: 45px;
+    background-color: #f0ffe9;
+    padding:10px 20px;
+    color:gray;
+}
+
 
 .homepage-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 80svh;
 }
 
 .homepage-container h1 {
@@ -64,10 +128,92 @@ body {
     margin:0;
 }
 
-.data-container {
+
+.about-us-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50svw;
+    gap: 20px;
+    padding-top:40px
+}
+
+.about-us-title-container h1 {
+    margin: 0;
+    text-align: center;
+}
+
+.about-us-title-container p {
+    margin: 0;
+    width: 43svw;
+    text-align: center;
+}
+
+#data-container {
     height:70vh;
     width:40svw;
-    border:3px solid white;
+    border:5px solid white;
+    animation: expandAnimationHomepage 5s ease-in 0s 1 normal forwards;
     
+}
+
+@keyframes expandAnimationHomepage {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    10% {
+        height: 70vh;
+        width: 0;
+    }
+    30%{
+        width: 40svw;
+    }
+
+}
+
+.companyInfo {
+    display: flex;
+    gap:40px;
+    align-items: center;
+    justify-content: center;
+    margin-top:40px;
+}
+
+.employeeInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    padding:10px;
+    overflow: hidden;
+
+}
+
+.employeeInfo h1 {
+    margin:0;
+    font-size:25px;
+    background-color: grey;
+    color: white;
+}
+
+.employeeInfo h2 {
+    color:white;
+    margin: 0;
+}
+
+.contact-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80svh;
+}
+
+.contact-us-container h1 {
+    font-size: 45px;
+    background-color: #f0ffe9;
+    padding:10px 20px;
+    color:gray;
 }
 

@@ -3,7 +3,7 @@ function searchCondition() {
   const resultDiv = document.getElementById("data-container");
   resultDiv.innerHTML = "";
 
-  fetch(".json")
+  fetch("./travel_recommendation_api.json")
     .then((response) => response.json())
     .then((data) => {
       const country = data.countries.find(
@@ -11,18 +11,24 @@ function searchCondition() {
       );
 
       if (country) {
-        const name = condition.symptoms.join(", ");
-        const prevention = condition.prevention.join(", ");
-        const treatment = condition.treatment;
+        console.log(country);
+        resultDiv.innerHTML += `<p>${country.name}</p>`;
 
-        resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-        resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
+        country.cities.map((city) => {
+          resultDiv.innerHTML += `<p>${city.name}</p>`;
+        });
+        // const name = condition.symptoms.join(", ");
+        // const prevention = condition.prevention.join(", ");
+        // const treatment = condition.treatment;
 
-        resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
-        resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
-        resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
+        // resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
+        // resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
+
+        // resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
+        // resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
+        // resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
       } else {
-        resultDiv.innerHTML = "Condition not found.";
+        resultDiv.innerHTML = "Country not found.";
       }
     })
     .catch((error) => {
@@ -30,8 +36,9 @@ function searchCondition() {
       resultDiv.innerHTML = "An error occurred while fetching data.";
     });
 }
-btnSearch.addEventListener("click", searchCondition);
+
+document.getElementById("btnSearch").addEventListener("click", searchCondition);
 
 function clearSearch() {
-  document.getElementById("countryInput").value= "";
+  document.getElementById("countryInput").value = "";
 }
