@@ -155,7 +155,24 @@ body, html {
     width:40svw;
     border:5px solid white;
     animation: expandAnimationHomepage 5s ease-in 0s 1 normal forwards;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+#data-container img {
+    width: 40svw;
+}
+
+#data-container p {
+    padding:20px;
+    margin: 0;
+    color: grey;
+}
+
+#data-container h1 {
+    margin: 0;
 }
 
 @keyframes expandAnimationHomepage {
@@ -217,3 +234,95 @@ body, html {
     color:gray;
 }
 
+
+#contactForm  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border:2.5px solid #f0ffe9;
+    padding: 0px 20px;
+    gap:10px;
+    height: 84px;
+    
+}
+
+
+
+
+
+.submitBtn {
+    background-color: #f0ffe9;
+    padding:10px 20px;
+    color:gray;
+    border:none;
+    cursor: pointer;
+}
+
+
+#contactForm  input {
+    
+    background-color: transparent;
+    border:1px solid #f0ffe9;
+    color: white;
+
+}
+
+
+#contactForm  textarea {
+    
+    background-color: transparent;
+    border:1px solid #f0ffe9;
+    margin-top: 2px;
+    color: white;
+
+}
+
+
+
+
+
+#btnSearch,
+#btnClear{
+    background-color: #f0ffe9 !important;
+    padding:5px 20px;
+    color:gray;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family:'Poppins';
+    
+}
+
+
+#countryInput   {
+    
+    background-color: transparent;
+    border:1px solid #f0ffe9;
+    padding:7px 20px;
+    width:230px;
+    color: white;
+
+}
+
+#countryInput::placeholder {
+    color: white;
+    opacity: 1;
+  }
+
+
+#btnSearch,
+#btnClear {
+    
+    background-color: transparent;
+    border:1px solid #f0ffe9;
+    margin-top: 2px;
+
+}
+
+
+.stroke {
+    color: transparent !important;
+    -webkit-text-stroke: 1.7px white; /* for WebKit-based browsers */
+    
+}
