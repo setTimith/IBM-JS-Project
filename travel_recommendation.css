@@ -127,7 +127,7 @@ body, html {
 
 
 .homepage-container h1 {
-    font-size: 45px;
+    font-size: 42px;
     background-color: #f0ffe9;
     padding:10px 20px;
     color:gray;
@@ -155,7 +155,7 @@ body, html {
 
 @media only screen and (max-width:1700px) {
     .homepage-container h1 {
-        font-size: 35px;
+        font-size: 33px;
     }
 
     .title-container {
